@@ -1,10 +1,18 @@
 package distinctsubstring;
 
+
+/*
+ Given a string, find the length of the longest substring without repeating characters.
+ Examples:
+ Given "abcabcbb", the answer is "abc", which the length is 3.
+ Given "bbbbb", the answer is "b", with the length of 1.
+ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ */
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-import org.junit.Assert;
-
+import static org.testng.Assert.assertEquals;
+import org.testng.annotations.Test;
 
 public class DistinctSubstring {
 
@@ -48,11 +56,11 @@ public class DistinctSubstring {
     @Test
     public static void testCode()
     {
-        Assert.assertequals(0,findMaxLength(""));
-        Assert.assertequals(3,findMaxLength("abc"));
-        Assert.assertequals(3,findMaxLength("abcabacbb"));
-        Assert.assertequals(2,findMaxLength("Bbbbb"));
-        Assert.assertequals(3,findMaxLength("#*#@"));
-        Assert.assertequals(3,findMaxLength("pwwkew"));
+        assertEquals(0,findMaxLength(""));
+        assertEquals(3,findMaxLength("abc"));
+        assertEquals(3,findMaxLength("abcabacbb"));
+        assertEquals(2,findMaxLength("Bbbbb"));
+        assertEquals(3,findMaxLength("#*#@"));
+        assertEquals(3,findMaxLength("pwwkew"));
     }
 }
